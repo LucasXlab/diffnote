@@ -93,6 +93,9 @@ diffnote --json          # machine-readable, for CI
 diffnote --llm           # add a prose summary using local Ollama (optional)
 ```
 
+Terminal output uses colors when stdout is a terminal and disables them for pipes or
+redirection. Use `--color` to force ANSI colors or `--no-color` to disable them.
+
 That's the whole workflow. No config file, no sign-up, no telemetry.
 
 ## Features
