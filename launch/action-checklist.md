@@ -1,18 +1,36 @@
 # 发布行动清单（发布当天 + 之后一周）
 
+> **状态更新（2026-10-16）**：仓库已建好并上线 — https://github.com/LucasYanzy/diffnote
+> ✅ 已完成：仓库创建（含 description + 9 topics）、main 首推、**v0.1.0 Release**、
+> **CI 通过**（Python 3.8–3.12 矩阵）、**5 个 good first issue**（#1–#5）、
+> **真实演示 GIF**（`demo.gif`，README 首屏）。
+> ⏳ 仍需你本人：① PyPI 发布（见下"PyPI 发布"小节，无凭据我不能代做）；
+> ② 按 D0 时间表把 `launch/` 里现成文案发到 HN/Reddit/X/PH。
+
+## PyPI 发布（当前唯一硬性待办）
+README 承诺 `pip install diffnote`，需先发布到 PyPI 才成立。已预置
+`.github/workflows/publish.yml`（手动触发 + PyPI Trusted Publishing，无需 token）：
+1. 在 https://pypi.org 注册/登录（首次发布需先做一次账号验证）。
+2. 新建 pending 项目名 `diffnote`（若已被占用需换名并同步改 README/pyproject）。
+3. PyPI 项目 → Settings → Publishing → Add GitHub publisher：
+   owner `LucasYanzy`，repo `diffnote`，workflow `publish.yml`，environment `pypi`。
+4. GitHub 仓库 → Actions → "Publish to PyPI" → Run workflow。
+5. 发布后验证：`pip install diffnote`（新 venv 中）→ `diffnote --version`。
+   （PyPI 上手动发包会立即锁定该名字，建议尽快执行以防抢注。）
+
 > 渠道顺序依据调研结论：首发 GitHub + HN/Reddit/X，配套在线可玩 Demo/截图；
 > 强演示（终端 GIF）是最大增长杠杆。时间以 UTC 为准，选开发者活跃的时段
 > （约 14:00–17:00 UTC，避开周末）。
 
-## 发布前 1 天
-- [ ] 在 GitHub 创建仓库（org 名替换 `LucasYanzy`），推送 `main`。
-- [ ] 确认 `pyproject.toml` 的 `Homepage/Repository` URL 正确。
-- [ ] 录制一条 15–25 秒的终端演示 GIF（见下方命令），放进 README 顶部。
-- [ ] 预填 5 个 good first issue（见 `GOOD_FIRST_ISSUES.md`）。
-- [ ] 准备好 HN / Reddit / X / PH 文案（本目录）。
+## 发布前 1 天（✅ 全部完成 2026-10-16）
+- [x] 在 GitHub 创建仓库（org 名替换 `LucasYanzy`），推送 `main`。
+- [x] 确认 `pyproject.toml` 的 `Homepage/Repository` URL 正确。
+- [x] 终端演示 GIF 已生成（`demo.gif`，README 首屏；PIL + Menlo 渲染真实输出）。
+- [x] 预填 5 个 good first issue（已发布为 issues #1–#5）。
+- [x] 准备好 HN / Reddit / X / PH 文案（本目录）。
 
 ## 发布当天（D0）
-- [ ] 09:00 UTC：在 GitHub 打 `v0.1.0` tag 并发布 Release（写一句亮点 + 链接 README）。
+- [x] ~~打 tag + Release~~：**v0.1.0 已发布**（含说明 + 链接 README）。
 - [ ] 14:00 UTC：**Show HN** 首发（标题用 `launch/hacker-news.md`）。
 - [ ] 14:30 UTC：Reddit r/python 发帖；15:00 r/git；15:30 r/programming。
 - [ ] 16:00 UTC：X 线程（4 条，见 `x-twitter.md`）。
@@ -29,7 +47,9 @@
 - [ ] D6–D7：汇总 star 来源（哪个渠道带来最多），记一笔，用于下次迭代。
 - [ ] 全程：**不刷 star、不买 star、不夸大功能**（已在约束中明确）。
 
-## 演示 GIF 录制（可选但强烈建议）
+## 演示 GIF（✅ 已完成，此节仅留作复现参考）
+已用 PIL + Menlo 以真实 `diffnote` 输出渲染 `demo.gif`（35 帧，含 `pip install` → 出结果全过程）。
+若以后想改用 asciinema 录制真实屏幕：
 ```bash
 # 用 asciinema 录制，再转 gif（或 terminalizer）
 pipx install asciinema
