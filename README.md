@@ -87,6 +87,7 @@ In any git repository with changes:
 diffnote                 # pretty terminal summary of your working tree
 diffnote --staged        # only staged changes
 diffnote --markdown      # GitHub PR-body markdown (paste-ready)
+diffnote --markdown --save out.md # write the PR body to a file, without stdout output
 diffnote --commits 5     # summarize the last 5 commits
 diffnote --base main     # changes vs main (great for PR prep)
 diffnote --json          # machine-readable, for CI
@@ -134,7 +135,6 @@ and then only to `localhost` (your Ollama).
 
 ## Roadmap
 
-- [ ] `--save` to write markdown straight into a PR template
 - [ ] Breaking-change detection (`feat!:` / public API paths)
 - [ ] `--stats` per-area totals
 - [ ] Plugin hooks for custom risk rules
