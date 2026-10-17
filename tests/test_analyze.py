@@ -1,5 +1,7 @@
+import json
 import textwrap
 from diffnote import analyze
+from diffnote import render
 
 SAMPLE = textwrap.dedent(
     """
@@ -36,6 +38,20 @@ SAMPLE = textwrap.dedent(
 ).strip()
 
 
+def _files_for(*paths):
+    diff = []
+    for path in paths:
+        diff.extend([
+            f"diff --git a/{path} b/{path}",
+            f"--- a/{path}",
+            f"+++ b/{path}",
+            "@@ -1 +1 @@",
+            "-old value",
+            "+new value",
+        ])
+    return analyze.parse_diff("\n".join(diff))
+
+
 def test_parse_diff_counts():
     files = analyze.parse_diff(SAMPLE)
     assert len(files) == 4
@@ -67,3 +83,27 @@ def test_suggest_title_derives_migration():
     files = analyze.parse_diff(SAMPLE)
     s = analyze.build_summary(files, commit_messages=[])
     assert "schema" in s["title"] or s["title"].startswith("feat")
+
+
+def test_breaking_risk_covers_public_api_paths_only():
+    files = _files_for("lib/client.py", "src/app/api/routes.py", "src/app/apiary.py")
+    summary = analyze.build_summary(files)
+    risk = next(r for r in summary["risks"] if r["label"] == "possible breaking change")
+    assert risk["files"] == ["lib/client.py", "src/app/api/routes.py"]
+
+
+def test_breaking_commit_marker_covers_all_changed_files():
+    files = _files_for("src/app/core.py", "README.md")
+    summary = analyze.build_summary(files, ["feat(api)!: remove the old response field"])
+    risk = next(r for r in summary["risks"] if r["label"] == "possible breaking change")
+    assert risk["files"] == ["src/app/core.py", "README.md"]
+
+
+def test_breaking_risk_appears_in_terminal_markdown_and_json():
+    summary = analyze.build_summary(_files_for("src/api/client.py"), ["fix!: change public return type"])
+    terminal = render.render_terminal(summary, use_color=False)
+    markdown = render.render_markdown(summary)
+    machine = json.loads(render.render_json(summary))
+    assert "possible breaking change" in terminal
+    assert "possible breaking change" in markdown
+    assert any(risk["label"] == "possible breaking change" for risk in machine["risks"])

@@ -29,6 +29,8 @@ DEP_FILES = {
 
 CONV_RE = re.compile(r"^(feat|fix|refactor|perf|chore|docs|test|style|build|ci)"
                      r"(\([^)]+\))?!?:", re.I)
+BREAKING_COMMIT_RE = re.compile(r"^[a-z][a-z0-9-]*(?:\([^)]+\))?!:", re.I)
+PUBLIC_API_RE = re.compile(r"^(?:lib/|src/(?:[^/]+/)*api(?:/|$))", re.I)
 
 
 MINUS_RE = re.compile(r"^--- ")
@@ -120,9 +122,11 @@ def _join_text(file):
     return "\n".join(file["lines"])
 
 
-def assess_risks(files):
+def assess_risks(files, commit_messages=None):
     """Return list of risk dicts: {label, files:[...]}."""
     risks = {}
+    breaking_commit = any(BREAKING_COMMIT_RE.match(message) for message in (commit_messages or []))
+    breaking_files = []
     for f in files:
         path = f["new"]
         content = _join_text(f)
@@ -134,6 +138,10 @@ def assess_risks(files):
             risks.setdefault("dependency change", []).append(path)
         if f["added"] + f["deleted"] >= 500:
             risks.setdefault("large batch change (review carefully)", []).append(path)
+        if breaking_commit or PUBLIC_API_RE.match(path):
+            breaking_files.append(path)
+    if breaking_files:
+        risks["possible breaking change"] = breaking_files
     return [{"label": k, "files": v} for k, v in risks.items()]
 
 
@@ -167,7 +175,7 @@ def build_summary(files, commit_messages=None):
         for t in _categorize(f["new"]):
             areas[t] += 1
 
-    risks = assess_risks(files)
+    risks = assess_risks(files, commit_messages)
     title = suggest_title(files, commit_messages)
     section = suggest_section(files, commit_messages)
 

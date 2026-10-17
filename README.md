@@ -101,6 +101,7 @@ That's the whole workflow. No config file, no sign-up, no telemetry.
 - 🔒 **Offline & private** — your code never leaves your machine.
 - 🧭 **Smart grouping** — files bucketed by area automatically.
 - 🚦 **Risk radar** — flags migrations, auth/security edits, dependency changes, huge diffs.
+- ⚠️ **Breaking-change hints** — flags `!:` commit markers and diffs under public API paths.
 - 🏷 **Title & section** — infers a conventional-commit title and changelog bucket.
 - 🤖 **Optional local LLM** — `--llm` asks Ollama for a prose blurb; if Ollama isn't
   running it silently falls back to the offline summary.
