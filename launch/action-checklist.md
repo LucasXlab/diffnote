@@ -1,3 +1,5 @@
+> Historical launch planning. For the current verified source installation and status, use [README](../README.md).
+
 # 发布行动清单（发布当天 + 之后一周）
 
 > **状态更新（2026-10-16）**：仓库已建好并上线 — https://github.com/LucasYanzy/diffnote

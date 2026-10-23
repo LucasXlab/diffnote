@@ -1,3 +1,5 @@
+> Historical launch planning. For the current verified source installation and status, use [README](../README.md).
+
 # diffnote 轨道 · 决定与踩坑记录
 
 > 工作区为多轨道并行环境，`research/假设.md`、`research/选题.md` 会被并行会话互相覆盖。
