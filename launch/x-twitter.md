@@ -25,7 +25,7 @@ if Ollama isn't running, it just falls back to the offline version.
 
 **Tweet 4 (cta):**
 Pure Python stdlib, MIT, ~few hundred lines. Stars / feedback welcome:
-https://github.com/LucasYanzy/diffnote
+https://github.com/LucasXlab/diffnote
 
 *(Style notes from research: lead with the pain + the "offline/no key" wedge,
 show a real terminal snippet, keep it under 280 chars each, no emoji spam.)*

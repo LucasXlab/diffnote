@@ -22,9 +22,9 @@ classifiers = [
 dependencies = []
 
 [project.urls]
-Homepage = "https://github.com/LucasYanzy/diffnote"
-Repository = "https://github.com/LucasYanzy/diffnote"
-Documentation = "https://github.com/LucasYanzy/diffnote#readme"
+Homepage = "https://github.com/LucasXlab/diffnote"
+Repository = "https://github.com/LucasXlab/diffnote"
+Documentation = "https://github.com/LucasXlab/diffnote#readme"
 
 [project.scripts]
 diffnote = "diffnote.cli:main"

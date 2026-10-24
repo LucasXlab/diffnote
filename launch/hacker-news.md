@@ -3,7 +3,7 @@
 **Title:**
 Show HN: diffnote – turn a git diff into a PR/changelog summary, fully offline
 
-**URL:** https://github.com/LucasYanzy/diffnote
+**URL:** https://github.com/LucasXlab/diffnote
 
 **Text (the submission comment):**
 I got tired of staring at a diff and dreading the PR description, and I didn't

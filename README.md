@@ -2,7 +2,7 @@
 <h1 align="center">diffnote</h1>
 <p align="center"><strong>Turn local Git changes into a reviewable pull request summary.</strong></p>
 
-[![CI](https://github.com/LucasYanzy/diffnote/actions/workflows/ci.yml/badge.svg)](https://github.com/LucasYanzy/diffnote/actions/workflows/ci.yml) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Version](https://img.shields.io/badge/source-v0.1.0-6b7280.svg)](https://github.com/LucasYanzy/diffnote/blob/main/pyproject.toml) ![Runtime](https://img.shields.io/badge/Python-3.8%2B-3776ab.svg) [![Stars](https://img.shields.io/github/stars/LucasYanzy/diffnote?style=flat)](https://github.com/LucasYanzy/diffnote/stargazers)
+[![CI](https://github.com/LucasXlab/diffnote/actions/workflows/ci.yml/badge.svg)](https://github.com/LucasXlab/diffnote/actions/workflows/ci.yml) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Version](https://img.shields.io/badge/source-v0.1.0-6b7280.svg)](https://github.com/LucasXlab/diffnote/blob/main/pyproject.toml) ![Runtime](https://img.shields.io/badge/Python-3.8%2B-3776ab.svg) [![Stars](https://img.shields.io/github/stars/LucasYanzy/diffnote?style=flat)](https://github.com/LucasXlab/diffnote/stargazers)
 
 [English](README.md) · [简体中文](README.zh-CN.md)
 
@@ -22,7 +22,7 @@ Writing a PR description after the coding is finished is easy to postpone. diffn
 ## Quick start
 
 ```bash
-git clone https://github.com/LucasYanzy/diffnote.git && cd diffnote
+git clone https://github.com/LucasXlab/diffnote.git && cd diffnote
 python3 -m pip install .
 python3 scripts/demo.py
 ```
@@ -89,7 +89,7 @@ The demo uses a temporary fixture and does not inspect your personal repositorie
 
 ## Contributing
 
-Read [CONTRIBUTING.md](CONTRIBUTING.md). Report reproducible problems in [Issues](https://github.com/LucasYanzy/diffnote/issues). Follow [SECURITY.md](SECURITY.md) for sensitive reports.
+Read [CONTRIBUTING.md](CONTRIBUTING.md). Report reproducible problems in [Issues](https://github.com/LucasXlab/diffnote/issues). Follow [SECURITY.md](SECURITY.md) for sensitive reports.
 
 ## License
 

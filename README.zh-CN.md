@@ -2,7 +2,7 @@
 <h1 align="center">diffnote</h1>
 <p align="center"><strong>将本地 Git 改动整理成便于审阅的 PR 摘要。</strong></p>
 
-[![CI](https://github.com/LucasYanzy/diffnote/actions/workflows/ci.yml/badge.svg)](https://github.com/LucasYanzy/diffnote/actions/workflows/ci.yml) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Version](https://img.shields.io/badge/source-v0.1.0-6b7280.svg)](https://github.com/LucasYanzy/diffnote/blob/main/pyproject.toml) ![Runtime](https://img.shields.io/badge/Python-3.8%2B-3776ab.svg) [![Stars](https://img.shields.io/github/stars/LucasYanzy/diffnote?style=flat)](https://github.com/LucasYanzy/diffnote/stargazers)
+[![CI](https://github.com/LucasXlab/diffnote/actions/workflows/ci.yml/badge.svg)](https://github.com/LucasXlab/diffnote/actions/workflows/ci.yml) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Version](https://img.shields.io/badge/source-v0.1.0-6b7280.svg)](https://github.com/LucasXlab/diffnote/blob/main/pyproject.toml) ![Runtime](https://img.shields.io/badge/Python-3.8%2B-3776ab.svg) [![Stars](https://img.shields.io/github/stars/LucasYanzy/diffnote?style=flat)](https://github.com/LucasXlab/diffnote/stargazers)
 
 [English](README.md) · [简体中文](README.zh-CN.md)
 
@@ -17,7 +17,7 @@
 ## 快速开始
 
 ```bash
-git clone https://github.com/LucasYanzy/diffnote.git && cd diffnote
+git clone https://github.com/LucasXlab/diffnote.git && cd diffnote
 python3 -m pip install .
 python3 scripts/demo.py
 ```
