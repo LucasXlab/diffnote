@@ -21,11 +21,7 @@ Writing a PR description after the coding is finished is easy to postpone. diffn
 
 ## Quick start
 
-```bash
-git clone https://github.com/LucasXlab/diffnote.git && cd diffnote
-python3 -m pip install .
-python3 scripts/demo.py
-```
+
 
 ## Features
 
@@ -80,12 +76,6 @@ python3 -m pytest -q
 
 The demo uses a temporary fixture and does not inspect your personal repositories or agent homes.
 
-## Roadmap
-
-- [ ] Improve error messages for invalid refs and empty histories.
-- [ ] Add configurable grouping rules.
-
-## Contributing
 
 Read [CONTRIBUTING.md](CONTRIBUTING.md). Report reproducible problems in [Issues](https://github.com/LucasXlab/diffnote/issues). Follow [SECURITY.md](SECURITY.md) for sensitive reports.
 

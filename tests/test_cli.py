@@ -93,6 +93,25 @@ def test_markdown_output(capsys):
     assert "## Changes" in out
 
 
+def test_save_markdown_writes_file_without_stdout(capsys):
+    d = _make_dirty_repo()
+    output_path = os.path.join(d, "pr-body.md")
+    old = os.getcwd()
+    os.chdir(d)
+    try:
+        rc = cli.main(["--save", output_path, "--markdown"])
+    finally:
+        os.chdir(old)
+    captured = capsys.readouterr()
+    with open(output_path, encoding="utf-8") as output_file:
+        saved = output_file.read()
+    assert rc == 0
+    assert captured.out == ""
+    assert "## Summary" in saved
+    assert "## Changes" in saved
+    assert saved.endswith("\n")
+
+
 def test_no_changes(capsys):
     import os
     d = tempfile.mkdtemp()
