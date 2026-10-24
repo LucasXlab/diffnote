@@ -3,6 +3,8 @@ import os
 import subprocess
 import tempfile
 
+import pytest
+
 from diffnote import cli
 
 
@@ -58,6 +60,25 @@ def test_json_output(capsys):
     assert "title" in data
 
 
+@pytest.mark.parametrize("is_tty,args,has_color", [
+    (True, [], True),
+    (False, [], False),
+    (True, ["--color"], True),
+    (False, ["--color"], True),
+    (True, ["--no-color"], False),
+    (False, ["--no-color"], False),
+])
+def test_terminal_color_selection(capsys, monkeypatch, is_tty, args, has_color):
+    monkeypatch.chdir(_make_dirty_repo())
+    monkeypatch.setattr(cli.sys.stdout, "isatty", lambda: is_tty)
+
+    assert cli.main(args) == 0
+
+    out = capsys.readouterr().out
+    assert "files changed" in out
+    assert ("\033[" in out) is has_color
+
+
 def test_markdown_output(capsys):
     import os
     d = _make_dirty_repo()
@@ -70,6 +91,25 @@ def test_markdown_output(capsys):
     out = capsys.readouterr().out
     assert "## Summary" in out
     assert "## Changes" in out
+
+
+def test_save_markdown_writes_file_without_stdout(capsys):
+    d = _make_dirty_repo()
+    output_path = os.path.join(d, "pr-body.md")
+    old = os.getcwd()
+    os.chdir(d)
+    try:
+        rc = cli.main(["--save", output_path, "--markdown"])
+    finally:
+        os.chdir(old)
+    captured = capsys.readouterr()
+    with open(output_path, encoding="utf-8") as output_file:
+        saved = output_file.read()
+    assert rc == 0
+    assert captured.out == ""
+    assert "## Summary" in saved
+    assert "## Changes" in saved
+    assert saved.endswith("\n")
 
 
 def test_no_changes(capsys):

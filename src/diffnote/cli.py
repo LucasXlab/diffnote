@@ -28,10 +28,16 @@ def build_parser():
     fmt = p.add_argument_group("output")
     fmt.add_argument("--markdown", action="store_true",
                      help="Print a GitHub PR-body markdown.")
+    fmt.add_argument("--save", metavar="PATH",
+                     help="Write markdown output to PATH instead of stdout (requires --markdown).")
     fmt.add_argument("--json", action="store_true",
                      help="Print machine-readable JSON.")
-    fmt.add_argument("--no-color", action="store_true",
-                     help="Disable ANSI colors.")
+    color = fmt.add_mutually_exclusive_group()
+    color.add_argument("--color", action="store_true", dest="use_color",
+                       help="Force ANSI colors, even when output is redirected.")
+    color.add_argument("--no-color", action="store_false", dest="use_color",
+                       help="Disable ANSI colors.")
+    p.set_defaults(use_color=None)
     fmt.add_argument("--llm", action="store_true",
                      help="Enhance with a local Ollama model (needs Ollama running).")
     return p
@@ -51,7 +57,10 @@ def get_diff(args, cwd):
 
 
 def main(argv=None):
-    args = build_parser().parse_args(argv)
+    parser = build_parser()
+    args = parser.parse_args(argv)
+    if args.save and (not args.markdown or args.json):
+        parser.error("--save requires --markdown and cannot be used with --json")
     try:
         cwd = gitutil.repo_root()
     except gitutil.GitError as exc:
@@ -85,9 +94,18 @@ def main(argv=None):
     if args.json:
         print(render.render_json(summary, llm_prose))
     elif args.markdown:
-        print(render.render_markdown(summary, llm_prose))
+        markdown = render.render_markdown(summary, llm_prose)
+        if args.save:
+            try:
+                with open(args.save, "w", encoding="utf-8", newline="\n") as output_file:
+                    output_file.write(markdown + "\n")
+            except OSError as exc:
+                print(f"diffnote: could not write {args.save}: {exc}", file=sys.stderr)
+                return 1
+        else:
+            print(markdown)
     else:
-        print(render.render_terminal(summary, use_color=not args.no_color, llm_prose=llm_prose))
+        print(render.render_terminal(summary, use_color=args.use_color, llm_prose=llm_prose))
     return 0
 
 
