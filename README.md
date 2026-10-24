@@ -25,7 +25,6 @@ Writing a PR description after the coding is finished is easy to postpone. diffn
 
 ## Features
 
-### Choose your diff
 
 Summarize tracked working-tree changes, staged changes, a base ref, or a commit range.
 
