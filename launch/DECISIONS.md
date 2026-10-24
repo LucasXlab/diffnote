@@ -1,3 +1,5 @@
+> Historical launch planning. For the current verified source installation and status, use [README](../README.md).
+
 # diffnote 轨道 · 决定与踩坑记录
 
 > 工作区为多轨道并行环境，`research/假设.md`、`research/选题.md` 会被并行会话互相覆盖。
@@ -24,7 +26,7 @@
   `diffnote / --staged / --commits N / --base / --range / --json / --markdown / --llm(降级)`。
 
 ## 发布（2026-10-16 已代为执行）
-- `gh` 已认证（LucasYanzy）→ 建公共仓库 https://github.com/LucasYanzy/diffnote、推 main、
+- `gh` 已认证（LucasYanzy）→ 建公共仓库 https://github.com/LucasXlab/diffnote、推 main、
   **v0.1.0 Release**、**issues #1–#5（good first issue）**、description + 9 topics；
   **CI 通过**（3.8–3.12 矩阵）。
 - **演示 GIF 真实生成**：PIL + Menlo 渲染 35 帧（install → 出结果），内容为真实 `diffnote` 输出；

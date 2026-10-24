@@ -25,7 +25,7 @@ asks a *local* Ollama model for a prose blurb — no cloud, no key.
 read. Would love feedback, especially on the heuristics (what risk signals would
 *you* want flagged?).
 
-Repo: https://github.com/LucasYanzy/diffnote
+Repo: https://github.com/LucasXlab/diffnote
 
 ## r/git
 **Title:** A CLI that reads `git diff` and writes your PR description + risk signals (offline)
