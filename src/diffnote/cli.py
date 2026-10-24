@@ -30,8 +30,12 @@ def build_parser():
                      help="Print a GitHub PR-body markdown.")
     fmt.add_argument("--json", action="store_true",
                      help="Print machine-readable JSON.")
-    fmt.add_argument("--no-color", action="store_true",
-                     help="Disable ANSI colors.")
+    color = fmt.add_mutually_exclusive_group()
+    color.add_argument("--color", action="store_true", dest="use_color",
+                       help="Force ANSI colors, even when output is redirected.")
+    color.add_argument("--no-color", action="store_false", dest="use_color",
+                       help="Disable ANSI colors.")
+    p.set_defaults(use_color=None)
     fmt.add_argument("--llm", action="store_true",
                      help="Enhance with a local Ollama model (needs Ollama running).")
     return p
@@ -87,7 +91,7 @@ def main(argv=None):
     elif args.markdown:
         print(render.render_markdown(summary, llm_prose))
     else:
-        print(render.render_terminal(summary, use_color=not args.no_color, llm_prose=llm_prose))
+        print(render.render_terminal(summary, use_color=args.use_color, llm_prose=llm_prose))
     return 0
 
 

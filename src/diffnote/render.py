@@ -1,6 +1,7 @@
 """Output renderers: terminal (ANSI), markdown (PR body), json."""
 
 import json as _json
+import sys
 
 RESET = "\033[0m"
 BOLD = "\033[1m"
@@ -16,7 +17,9 @@ def _c(text, code, use_color):
     return f"{code}{text}{RESET}" if use_color else text
 
 
-def render_terminal(summary, use_color=True, llm_prose=None):
+def render_terminal(summary, use_color=None, llm_prose=None):
+    if use_color is None:
+        use_color = sys.stdout.isatty()
     out = []
     bar = "─" * 42
     out.append(_c("diffnote", BOLD + CYAN, use_color) +

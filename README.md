@@ -27,8 +27,6 @@ python3 -m pip install .
 python3 scripts/demo.py
 ```
 
-Install from this checkout to use the reviewed source version. The installed tool has no third-party runtime dependencies; cloning and installation can require network access.
-
 ## Features
 
 ### Choose your diff
