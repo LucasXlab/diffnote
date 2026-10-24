@@ -1,6 +1,8 @@
+> Historical launch planning. For the current verified source installation and status, use [README](../README.md).
+
 # 发布行动清单（发布当天 + 之后一周）
 
-> **状态更新（2026-10-16）**：仓库已建好并上线 — https://github.com/LucasYanzy/diffnote
+> **状态更新（2026-10-16）**：仓库已建好并上线 — https://github.com/LucasXlab/diffnote
 > ✅ 已完成：仓库创建（含 description + 9 topics）、main 首推、**v0.1.0 Release**、
 > **CI 通过**（Python 3.8–3.12 矩阵）、**5 个 good first issue**（#1–#5）、
 > **真实演示 GIF**（`demo.gif`，README 首屏）。
@@ -13,7 +15,7 @@ README 承诺 `pip install diffnote`，需先发布到 PyPI 才成立。已预�
 1. 在 https://pypi.org 注册/登录（首次发布需先做一次账号验证）。
 2. 新建 pending 项目名 `diffnote`（若已被占用需换名并同步改 README/pyproject）。
 3. PyPI 项目 → Settings → Publishing → Add GitHub publisher：
-   owner `LucasYanzy`，repo `diffnote`，workflow `publish.yml`，environment `pypi`。
+   owner `LucasXlab`，repo `diffnote`，workflow `publish.yml`，environment `pypi`。
 4. GitHub 仓库 → Actions → "Publish to PyPI" → Run workflow。
 5. 发布后验证：`pip install diffnote`（新 venv 中）→ `diffnote --version`。
    （PyPI 上手动发包会立即锁定该名字，建议尽快执行以防抢注。）
@@ -23,7 +25,7 @@ README 承诺 `pip install diffnote`，需先发布到 PyPI 才成立。已预�
 > （约 14:00–17:00 UTC，避开周末）。
 
 ## 发布前 1 天（✅ 全部完成 2026-10-16）
-- [x] 在 GitHub 创建仓库（org 名替换 `LucasYanzy`），推送 `main`。
+- [x] 在 GitHub 创建仓库（org 名替换 `LucasXlab`），推送 `main`。
 - [x] 确认 `pyproject.toml` 的 `Homepage/Repository` URL 正确。
 - [x] 终端演示 GIF 已生成（`demo.gif`，README 首屏；PIL + Menlo 渲染真实输出）。
 - [x] 预填 5 个 good first issue（已发布为 issues #1–#5）。

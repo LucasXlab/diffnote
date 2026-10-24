@@ -8,3 +8,10 @@ dist/
 .venv/
 venv/
 *.cast
+
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
