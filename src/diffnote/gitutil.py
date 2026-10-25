@@ -45,10 +45,18 @@ def get_range_diff(base, head="HEAD", cwd=None):
     return proc.stdout
 
 
-def get_commit_messages(n=25, cwd=None):
-    proc = _run(
-        ["log", "-n", str(n), "--no-merges", "--pretty=format:%s"], cwd=cwd
-    )
+def get_commit_messages(n=25, cwd=None, revision_range=None):
+    """Read commit subjects, optionally restricted to an explicit comparison.
+
+    Pass n=None to include every commit in a selected range.
+    """
+    args = ["log", "--no-merges", "--pretty=format:%s"]
+    if n is not None:
+        args.extend(["-n", str(n)])
+    if revision_range is not None:
+        args.append(revision_range)
+    args.append("--")
+    proc = _run(args, cwd=cwd)
     return [m for m in proc.stdout.splitlines() if m.strip()]
 
 
