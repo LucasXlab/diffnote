@@ -2,7 +2,7 @@
 <h1 align="center">diffnote</h1>
 <p align="center"><strong>将本地 Git 改动整理成便于审阅的 PR 摘要。</strong></p>
 
-[![CI](https://github.com/LucasXlab/diffnote/actions/workflows/ci.yml/badge.svg)](https://github.com/LucasXlab/diffnote/actions/workflows/ci.yml) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Version](https://img.shields.io/badge/source-v0.1.0-6b7280.svg)](https://github.com/LucasXlab/diffnote/blob/main/pyproject.toml) ![Runtime](https://img.shields.io/badge/Python-3.8%2B-3776ab.svg) [![Stars](https://img.shields.io/github/stars/LucasYanzy/diffnote?style=flat)](https://github.com/LucasXlab/diffnote/stargazers)
+[![CI](https://github.com/LucasXlab/diffnote/actions/workflows/ci.yml/badge.svg)](https://github.com/LucasXlab/diffnote/actions/workflows/ci.yml) [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) [![Version](https://img.shields.io/badge/source-v0.1.0-6b7280.svg)](https://github.com/LucasXlab/diffnote/blob/main/pyproject.toml) ![Runtime](https://img.shields.io/badge/Python-3.8%2B-3776ab.svg) [![Stars](https://img.shields.io/github/stars/LucasXlab/diffnote?style=flat)](https://github.com/LucasXlab/diffnote/stargazers)
 
 [English](README.md) · [简体中文](README.zh-CN.md)
 
@@ -36,7 +36,7 @@ python3 scripts/demo.py
 
 ### 导出初稿
 
-输出终端、Markdown 或 JSON；标题与风险信号来自启发式规则，不代替语义审查。
+输出终端、Markdown 或 JSON；用 `--markdown --save body.md` 可保存文件，成功时标准输出为空。标题与风险信号来自启发式规则，不代替语义审查。
 
 ### 可选模型润色
 
@@ -51,7 +51,14 @@ diffnote --staged
 diffnote --base main --markdown
 diffnote --range main..HEAD --json
 diffnote --commits 2
+diffnote --markdown --save body.md
+diffnote --color
+diffnote --no-color
 ```
+
+默认仅在标准输出连接终端时使用 ANSI 颜色；`--color` 强制开启，`--no-color` 禁用。
+
+破坏性变更提示只读取 `--commits`、`--range` 或 `--base` 所选比较范围内的 `!:` 提交标记，不再截断为最近 25 个提交。纯工作区或暂存摘要不套用历史提交标记；公共 API 路径提示仍对所有模式生效。
 
 ## 架构
 

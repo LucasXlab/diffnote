@@ -56,6 +56,20 @@ def get_diff(args, cwd):
     return gitutil.get_diff_text("HEAD", cwd=cwd, staged=args.staged)
 
 
+def get_selected_commit_messages(args, cwd):
+    if args.commits:
+        revision_range = f"HEAD~{args.commits}..HEAD"
+    elif args.range:
+        base, _, head = args.range.partition("..")
+        revision_range = f"{base}..{head or 'HEAD'}"
+    elif args.base:
+        revision_range = f"{args.base}..HEAD"
+    else:
+        # Working-tree and staged changes have no commit subjects of their own.
+        return []
+    return gitutil.get_commit_messages(n=None, cwd=cwd, revision_range=revision_range)
+
+
 def main(argv=None):
     parser = build_parser()
     args = parser.parse_args(argv)
@@ -80,7 +94,7 @@ def main(argv=None):
         print("diffnote: no file changes parsed.", file=sys.stderr)
         return 0
 
-    commit_messages = gitutil.get_commit_messages(cwd=cwd)
+    commit_messages = get_selected_commit_messages(args, cwd)
     summary = analyze.build_summary(files, commit_messages)
 
     llm_prose = None

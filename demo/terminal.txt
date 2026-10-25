@@ -3,7 +3,7 @@ $ diffnote --no-color
 diffnote — PR / changelog summary
 ──────────────────────────────────────────
   2 files changed  (+2 / -1)
-  Suggested title: fix: round checkout amounts
+  Suggested title: fix: update implementation
   Changelog section: fix
 
   Changes by area
