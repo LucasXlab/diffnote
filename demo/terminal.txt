@@ -1,0 +1,47 @@
+Synthetic fixture; real installed diffnote output. No tests are executed.
+
+$ diffnote --no-color
+
+diffnote — reviewable PR draft
+────────────────────────────────────────────────────
+  2 files changed (+2 / -1 text lines)
+  Suggested title: chore: review source changes
+  Title source: diff paths
+  Change source: tracked working tree
+  Changelog section: chore
+
+  Changes by area
+   source     1
+   tests      1
+
+  Highlights
+   • src/total.py [modified] +1 -1
+   • tests/test_total.py [modified] +1 -0
+────────────────────────────────────────────────────
+  Offline heuristic draft. Tests were not run; review before sharing.
+
+
+$ diffnote --markdown
+
+## Summary
+
+- **chore: review source changes**
+- Title source: diff paths
+- Change source: tracked working tree
+- Changelog section: <code>chore</code>
+- 2 files changed (+2 / -1 text lines)
+
+## Changes
+
+| File | Status | + | - | Area / metadata |
+|---|---|---:|---:|---|
+| <code>src/total.py</code> | modified | 1 | 1 | source |
+| <code>tests/test_total.py</code> | modified | 1 | 0 | tests |
+
+## Review checklist
+
+- [ ] Verify the title and intended behavior.
+- [ ] Run the relevant tests; diffnote did not run them.
+- [ ] Review omitted semantics, binary content, and possible sensitive paths.
+
+_Generated offline by diffnote. Heuristic draft; no safety or semantic correctness guarantee._

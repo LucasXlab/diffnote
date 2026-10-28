@@ -1,0 +1,45 @@
+{
+  "total_files": 1,
+  "added": 1,
+  "deleted": 0,
+  "areas": {
+    "docs": 1
+  },
+  "risks": [],
+  "title": "docs: update documentation",
+  "section": "docs",
+  "highlights": [
+    {
+      "path": "docs/guide.md",
+      "old_path": "docs/guide.md",
+      "new_path": "docs/guide.md",
+      "status": "modified",
+      "binary": false,
+      "old_mode": "100644",
+      "new_mode": "100644",
+      "added": 1,
+      "deleted": 0,
+      "area": "docs",
+      "risks": []
+    }
+  ],
+  "files": [
+    {
+      "path": "docs/guide.md",
+      "old_path": "docs/guide.md",
+      "new_path": "docs/guide.md",
+      "status": "modified",
+      "added": 1,
+      "deleted": 0,
+      "binary": false,
+      "old_mode": "100644",
+      "new_mode": "100644"
+    }
+  ],
+  "source": "staged changes",
+  "title_source": "diff paths",
+  "limits": [
+    "Heuristic draft; semantic correctness is unverified.",
+    "Tests were not run. Absence of signals is not evidence of safety."
+  ]
+}

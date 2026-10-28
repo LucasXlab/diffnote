@@ -1,0 +1,56 @@
+{
+  "cast_sha256": "8e4b7cce4982d77833da64e6659bd79380fb7dfb54f1d38a5b2ca05caa22bbdb",
+  "cast_duration_seconds": 2.311965,
+  "cast_output_events": 8,
+  "transcript_normalization": "CRLF to LF; final blank lines reduced to one final newline. Original cast unchanged.",
+  "media": [
+    {
+      "path": "assets/demo.png",
+      "panel": "working",
+      "page": 1,
+      "pages": 1
+    },
+    {
+      "path": "assets/feature-staged.png",
+      "panel": "staged",
+      "page": 1,
+      "pages": 1
+    },
+    {
+      "path": "assets/feature-metadata.png",
+      "panel": "metadata",
+      "page": 1,
+      "pages": 1
+    },
+    {
+      "path": "assets/feature-signals.png",
+      "panel": "signals",
+      "page": 1,
+      "pages": 1
+    },
+    {
+      "path": "assets/feature-json.png",
+      "panel": "json",
+      "page": 1,
+      "pages": 2
+    },
+    {
+      "path": "assets/feature-refusal.png",
+      "panel": "refusal",
+      "page": 1,
+      "pages": 1
+    }
+  ],
+  "gif_frames": 7,
+  "gif_holds_ms": [
+    8000,
+    8000,
+    8000,
+    10000,
+    10000,
+    10000,
+    8000
+  ],
+  "styling": "Native Pillow rendering; exact panels, wrapping, JSON pagination, static reading holds; no simulated typing or changed output.",
+  "social_excerpt": "working.stdout.txt lines 3-8, 14-15, final disclaimer; wrapped without changing words"
+}

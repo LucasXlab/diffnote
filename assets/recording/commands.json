@@ -1,0 +1,337 @@
+[
+  {
+    "name": "init",
+    "cwd": "temporary synthetic project",
+    "argv": [
+      "git",
+      "init",
+      "-q",
+      "-b",
+      "main"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "initial-add",
+    "cwd": "temporary synthetic project",
+    "argv": [
+      "git",
+      "add",
+      "."
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "initial-commit",
+    "cwd": "temporary synthetic project",
+    "argv": [
+      "git",
+      "-c",
+      "commit.gpgsign=false",
+      "commit",
+      "-qm",
+      "fixture: initial"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "stage-docs",
+    "cwd": "temporary synthetic project",
+    "argv": [
+      "git",
+      "add",
+      "docs/guide.md"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "working",
+    "cwd": "temporary synthetic project",
+    "argv": [
+      "python",
+      "-m",
+      "diffnote",
+      "--no-color"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_sha256": "e29b6b710761630be2d3d05b6b2c4eb0588b80d029f2d3c0a5f8fb0196956850",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "working-json",
+    "cwd": "temporary synthetic project",
+    "argv": [
+      "python",
+      "-m",
+      "diffnote",
+      "--json"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_sha256": "8e43186d94ba99c2453163a9ade51ea02145d991478adef0e1499d96d68ce293",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "staged",
+    "cwd": "temporary synthetic project",
+    "argv": [
+      "python",
+      "-m",
+      "diffnote",
+      "--staged",
+      "--no-color"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_sha256": "1b5698c1700fc55f3e99a75f681cb18e3ba4da6d6a857f8150a978196e16f60e",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "staged-json",
+    "cwd": "temporary synthetic project",
+    "argv": [
+      "python",
+      "-m",
+      "diffnote",
+      "--staged",
+      "--json"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_sha256": "98e2736951084b256867d3dca172e096287f50c67c3e96010d57891faa6f9de2",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "reset-before-metadata",
+    "cwd": "temporary synthetic project",
+    "argv": [
+      "git",
+      "reset",
+      "--hard",
+      "-q",
+      "HEAD"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "rename",
+    "cwd": "temporary synthetic project",
+    "argv": [
+      "git",
+      "mv",
+      "docs/legacy.md",
+      "docs/usage.md"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "stage-metadata",
+    "cwd": "temporary synthetic project",
+    "argv": [
+      "git",
+      "add",
+      "."
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "metadata",
+    "cwd": "temporary synthetic project",
+    "argv": [
+      "python",
+      "-m",
+      "diffnote",
+      "--staged",
+      "--no-color"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_sha256": "0b4ef477948d2d8db6cc99eefe8bb1d67fa644b91353e693a648517fe8144cda",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "metadata-json",
+    "cwd": "temporary synthetic project",
+    "argv": [
+      "python",
+      "-m",
+      "diffnote",
+      "--staged",
+      "--json"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_sha256": "30fd180211dff2f42c26a35549be78546f04eed6706a68ec9e9014249f064a57",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "metadata-numstat",
+    "cwd": "temporary synthetic project",
+    "argv": [
+      "git",
+      "diff",
+      "--cached",
+      "--numstat",
+      "-z",
+      "-M"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_sha256": "7399b65d29d53e2c293458cace1c02470883970bacdb9e725d3c7e846c10a9a3",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "metadata-status",
+    "cwd": "temporary synthetic project",
+    "argv": [
+      "git",
+      "diff",
+      "--cached",
+      "--name-status",
+      "-z",
+      "-M"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_sha256": "652908c676449e05fd3b26538945e5f2cc3645f36ccab06b081b190e84302bf5",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "reset-before-signals",
+    "cwd": "temporary synthetic project",
+    "argv": [
+      "git",
+      "reset",
+      "--hard",
+      "-q",
+      "HEAD"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "stage-signals",
+    "cwd": "temporary synthetic project",
+    "argv": [
+      "git",
+      "add",
+      "."
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "signals",
+    "cwd": "temporary synthetic project",
+    "argv": [
+      "python",
+      "-m",
+      "diffnote",
+      "--staged",
+      "--no-color"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_sha256": "de99f0ce70088f8e8985b974578a2fa3740f2f4423340f2d9e9eb113cce4b78a",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "signals-json",
+    "cwd": "temporary synthetic project",
+    "argv": [
+      "python",
+      "-m",
+      "diffnote",
+      "--staged",
+      "--json"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_sha256": "317e6a394069091f1a1ca7aac1ee37bb9222b8e6806d51186572bf46f9dd06f4",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "signals-markdown",
+    "cwd": "temporary synthetic project",
+    "argv": [
+      "python",
+      "-m",
+      "diffnote",
+      "--staged",
+      "--markdown"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_sha256": "5112be1492fef1576bf3b7faf0837539c88f38c917954f115d388b9f29847bdd",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "reset-before-refusal",
+    "cwd": "temporary synthetic project",
+    "argv": [
+      "git",
+      "reset",
+      "--hard",
+      "-q",
+      "HEAD"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "configure-filter",
+    "cwd": "temporary synthetic project",
+    "argv": [
+      "git",
+      "config",
+      "filter.synthetic.clean",
+      "touch FILTER_EXECUTED"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "filter-refusal",
+    "cwd": "temporary synthetic project",
+    "argv": [
+      "python",
+      "-m",
+      "diffnote",
+      "--no-color"
+    ],
+    "exit_code": 2,
+    "expected_exit_code": 2,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "a86e1d182fb37990d3f43536f10b8edbca74de3f8d3b4ede2f5538f1eb5f3b67"
+  }
+]

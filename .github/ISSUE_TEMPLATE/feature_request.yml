@@ -1,0 +1,27 @@
+name: Feature request
+description: Suggest a heuristic, output format, or integration
+title: "[feat]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What pain does this solve for PR/changelog authoring?
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Proposed idea
+    validations:
+      required: true
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Area
+      options:
+        - Analysis heuristic
+        - Output format
+        - Local LLM integration
+        - CLI / UX

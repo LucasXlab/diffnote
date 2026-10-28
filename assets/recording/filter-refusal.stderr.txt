@@ -1,0 +1,1 @@
+diffnote: repositories with clean/process filters are unsupported; no filter programs will run

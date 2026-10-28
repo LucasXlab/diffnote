@@ -1,0 +1,16 @@
+{
+  "fixture": "Entirely synthetic Git history; no downloaded code or public PR patch.",
+  "interpreter": "Python 3.11",
+  "path_normalization": "Only Python argv[0] is labelled python in commands.json; output is unchanged.",
+  "core_sha256": {
+    "__init__.py": "f6f54e7ab5db9958c674266fe0df17023b4dc03f53b7d7288176c4025ba56e47",
+    "__main__.py": "307299fda7b77d22c64cb51430ec75e5f59d78e9c948786afb3b2544fe45e4b7",
+    "analyze.py": "2f835837383114e475707714b50568026ead6ea3bb91d6570a02b9c81ffc3bed",
+    "cli.py": "1c992fa0a615cc073913cb1c35336947e694751f31177037d4dff3f29fcb3fb0",
+    "gitutil.py": "d41c64a13e56a7b28796c4e43fff514a25585c9d6611ca18818fd3f51827be1e",
+    "parser.py": "37e1b55f57c401c5db3ed65c6d4e1ddf9dd02e8de6513f509fd6a86708437e39",
+    "render.py": "187435283d0166b6fe9017d2aab8a62883a1f33d4ff06ac4cfa4e5ee5a16758d"
+  },
+  "tests": "No fixture code or tests are executed; assertions only check demo outcomes.",
+  "recording": "Local asciinema capture; no upload. Media selects labelled panels with added reading pauses."
+}

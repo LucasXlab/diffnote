@@ -1,0 +1,19 @@
+diffnote — reviewable PR draft
+────────────────────────────────────────────────────
+  4 files changed (+0 / -0 text lines)
+  Suggested title: docs: update documentation
+  Title source: diff paths
+  Change source: staged changes
+  Changelog section: docs
+
+  Changes by area
+   docs       2
+   source     2
+
+  Highlights
+   • data/empty.txt [added] +0 -0 mode — → 100644
+   • data/icon.bin [modified] binary; line counts unavailable
+   • docs/legacy.md → docs/usage.md [renamed] +0 -0
+   • src/total.py [modified] +0 -0 mode 100644 → 100755
+────────────────────────────────────────────────────
+  Offline heuristic draft. Tests were not run; review before sharing.

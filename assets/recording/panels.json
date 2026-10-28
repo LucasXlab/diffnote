@@ -1,0 +1,50 @@
+[
+  {
+    "id": "working",
+    "title": "Tracked working tree",
+    "command": "diffnote --no-color",
+    "source": "working.stdout.txt",
+    "selection": "complete stdout",
+    "text": "diffnote \u2014 reviewable PR draft\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  2 files changed (+2 / -1 text lines)\n  Suggested title: docs: update documentation\n  Title source: diff paths\n  Change source: tracked working tree\n  Changelog section: docs\n\n  Changes by area\n   docs       1\n   source     1\n\n  Highlights\n   \u2022 src/total.py [modified] +1 -1\n   \u2022 docs/guide.md [modified] +1 -0\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  Offline heuristic draft. Tests were not run; review before sharing."
+  },
+  {
+    "id": "staged",
+    "title": "Only the staged documentation",
+    "command": "diffnote --staged --no-color",
+    "source": "staged.stdout.txt",
+    "selection": "complete stdout",
+    "text": "diffnote \u2014 reviewable PR draft\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  1 files changed (+1 / -0 text lines)\n  Suggested title: docs: update documentation\n  Title source: diff paths\n  Change source: staged changes\n  Changelog section: docs\n\n  Changes by area\n   docs       1\n\n  Highlights\n   \u2022 docs/guide.md [modified] +1 -0\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  Offline heuristic draft. Tests were not run; review before sharing."
+  },
+  {
+    "id": "metadata",
+    "title": "Empty, binary, rename and mode facts",
+    "command": "diffnote --staged --no-color",
+    "source": "metadata.stdout.txt",
+    "selection": "complete stdout",
+    "text": "diffnote \u2014 reviewable PR draft\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  4 files changed (+0 / -0 text lines)\n  Suggested title: docs: update documentation\n  Title source: diff paths\n  Change source: staged changes\n  Changelog section: docs\n\n  Changes by area\n   docs       2\n   source     2\n\n  Highlights\n   \u2022 data/empty.txt [added] +0 -0 mode \u2014 \u2192 100644\n   \u2022 data/icon.bin [modified] binary; line counts unavailable\n   \u2022 docs/legacy.md \u2192 docs/usage.md [renamed] +0 -0\n   \u2022 src/total.py [modified] +0 -0 mode 100644 \u2192 100755\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  Offline heuristic draft. Tests were not run; review before sharing."
+  },
+  {
+    "id": "signals",
+    "title": "Signals have rule and path evidence",
+    "command": "diffnote --staged --no-color",
+    "source": "signals.stdout.txt",
+    "selection": "complete stdout",
+    "text": "diffnote \u2014 reviewable PR draft\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  2 files changed (+2 / -1 text lines)\n  Suggested title: chore: review database schema changes\n  Title source: diff paths\n  Change source: staged changes\n  Changelog section: chore\n\n  Review signals (heuristics, not safety findings)\n   \u2022 auth / security related\n       auth/session.py [auth-path; path]\n       auth/session.py [security-keyword; deleted]\n   \u2022 database migration / schema change\n       db/migrations/001_widgets.sql [migration-path; path]\n       db/migrations/001_widgets.sql [schema-keyword; added]\n\n  Changes by area\n   migration  1\n   source     1\n\n  Highlights\n   \u2022 auth/session.py [modified] +1 -1\n   \u2022 db/migrations/001_widgets.sql [added] +1 -0 mode \u2014 \u2192 100644\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\n  Offline heuristic draft. Tests were not run; review before sharing."
+  },
+  {
+    "id": "json",
+    "title": "JSON facts for local tooling",
+    "command": "diffnote --staged --json  # metadata scenario",
+    "source": "metadata-json.stdout.txt",
+    "selection": "JSON projection: source, files, limits",
+    "text": "{\n  \"source\": \"staged changes\",\n  \"files\": [\n    {\n      \"path\": \"data/empty.txt\",\n      \"old_path\": null,\n      \"new_path\": \"data/empty.txt\",\n      \"status\": \"added\",\n      \"added\": 0,\n      \"deleted\": 0,\n      \"binary\": false,\n      \"old_mode\": null,\n      \"new_mode\": \"100644\"\n    },\n    {\n      \"path\": \"data/icon.bin\",\n      \"old_path\": \"data/icon.bin\",\n      \"new_path\": \"data/icon.bin\",\n      \"status\": \"modified\",\n      \"added\": null,\n      \"deleted\": null,\n      \"binary\": true,\n      \"old_mode\": \"100644\",\n      \"new_mode\": \"100644\"\n    },\n    {\n      \"path\": \"docs/usage.md\",\n      \"old_path\": \"docs/legacy.md\",\n      \"new_path\": \"docs/usage.md\",\n      \"status\": \"renamed\",\n      \"added\": 0,\n      \"deleted\": 0,\n      \"binary\": false,\n      \"old_mode\": null,\n      \"new_mode\": null\n    },\n    {\n      \"path\": \"src/total.py\",\n      \"old_path\": \"src/total.py\",\n      \"new_path\": \"src/total.py\",\n      \"status\": \"modified\",\n      \"added\": 0,\n      \"deleted\": 0,\n      \"binary\": false,\n      \"old_mode\": \"100644\",\n      \"new_mode\": \"100755\"\n    }\n  ],\n  \"limits\": [\n    \"Heuristic draft; semantic correctness is unverified.\",\n    \"Tests were not run. Absence of signals is not evidence of safety.\"\n  ]\n}"
+  },
+  {
+    "id": "refusal",
+    "title": "Configured Git filters are rejected",
+    "command": "diffnote --no-color",
+    "source": "filter-refusal.stderr.txt",
+    "selection": "complete stderr plus labelled wrapper check",
+    "text": "diffnote: repositories with clean/process filters are unsupported; no filter programs will run\nExpected exit: 2. Helper marker absent."
+  }
+]

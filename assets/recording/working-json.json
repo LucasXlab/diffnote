@@ -1,0 +1,70 @@
+{
+  "total_files": 2,
+  "added": 2,
+  "deleted": 1,
+  "areas": {
+    "docs": 1,
+    "source": 1
+  },
+  "risks": [],
+  "title": "docs: update documentation",
+  "section": "docs",
+  "highlights": [
+    {
+      "path": "src/total.py",
+      "old_path": "src/total.py",
+      "new_path": "src/total.py",
+      "status": "modified",
+      "binary": false,
+      "old_mode": "100644",
+      "new_mode": "100644",
+      "added": 1,
+      "deleted": 1,
+      "area": "source",
+      "risks": []
+    },
+    {
+      "path": "docs/guide.md",
+      "old_path": "docs/guide.md",
+      "new_path": "docs/guide.md",
+      "status": "modified",
+      "binary": false,
+      "old_mode": "100644",
+      "new_mode": "100644",
+      "added": 1,
+      "deleted": 0,
+      "area": "docs",
+      "risks": []
+    }
+  ],
+  "files": [
+    {
+      "path": "docs/guide.md",
+      "old_path": "docs/guide.md",
+      "new_path": "docs/guide.md",
+      "status": "modified",
+      "added": 1,
+      "deleted": 0,
+      "binary": false,
+      "old_mode": "100644",
+      "new_mode": "100644"
+    },
+    {
+      "path": "src/total.py",
+      "old_path": "src/total.py",
+      "new_path": "src/total.py",
+      "status": "modified",
+      "added": 1,
+      "deleted": 1,
+      "binary": false,
+      "old_mode": "100644",
+      "new_mode": "100644"
+    }
+  ],
+  "source": "tracked working tree",
+  "title_source": "diff paths",
+  "limits": [
+    "Heuristic draft; semantic correctness is unverified.",
+    "Tests were not run. Absence of signals is not evidence of safety."
+  ]
+}

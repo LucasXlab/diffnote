@@ -1,0 +1,31 @@
+## Summary
+
+- **chore: review database schema changes**
+- Title source: diff paths
+- Change source: staged changes
+- Changelog section: <code>chore</code>
+- 2 files changed (+2 / -1 text lines)
+
+## Changes
+
+| File | Status | + | - | Area / metadata |
+|---|---|---:|---:|---|
+| <code>auth/session.py</code> | modified | 1 | 1 | source |
+| <code>db/migrations/001_widgets.sql</code> | added | 1 | 0 | migration; mode — → 100644 |
+
+## Risk signals
+
+- auth / security related
+  - <code>auth/session.py</code> — auth-path \(path\)
+  - <code>auth/session.py</code> — security-keyword \(deleted\)
+- database migration / schema change
+  - <code>db/migrations/001_widgets.sql</code> — migration-path \(path\)
+  - <code>db/migrations/001_widgets.sql</code> — schema-keyword \(added\)
+
+## Review checklist
+
+- [ ] Verify the title and intended behavior.
+- [ ] Run the relevant tests; diffnote did not run them.
+- [ ] Review omitted semantics, binary content, and possible sensitive paths.
+
+_Generated offline by diffnote. Heuristic draft; no safety or semantic correctness guarantee._

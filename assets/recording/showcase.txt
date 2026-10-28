@@ -1,0 +1,154 @@
+
+=== Tracked working tree ===
+$ diffnote --no-color
+diffnote — reviewable PR draft
+────────────────────────────────────────────────────
+  2 files changed (+2 / -1 text lines)
+  Suggested title: docs: update documentation
+  Title source: diff paths
+  Change source: tracked working tree
+  Changelog section: docs
+
+  Changes by area
+   docs       1
+   source     1
+
+  Highlights
+   • src/total.py [modified] +1 -1
+   • docs/guide.md [modified] +1 -0
+────────────────────────────────────────────────────
+  Offline heuristic draft. Tests were not run; review before sharing.
+
+
+=== Only the staged documentation ===
+$ diffnote --staged --no-color
+diffnote — reviewable PR draft
+────────────────────────────────────────────────────
+  1 files changed (+1 / -0 text lines)
+  Suggested title: docs: update documentation
+  Title source: diff paths
+  Change source: staged changes
+  Changelog section: docs
+
+  Changes by area
+   docs       1
+
+  Highlights
+   • docs/guide.md [modified] +1 -0
+────────────────────────────────────────────────────
+  Offline heuristic draft. Tests were not run; review before sharing.
+
+
+=== Empty, binary, rename and mode facts ===
+$ diffnote --staged --no-color
+diffnote — reviewable PR draft
+────────────────────────────────────────────────────
+  4 files changed (+0 / -0 text lines)
+  Suggested title: docs: update documentation
+  Title source: diff paths
+  Change source: staged changes
+  Changelog section: docs
+
+  Changes by area
+   docs       2
+   source     2
+
+  Highlights
+   • data/empty.txt [added] +0 -0 mode — → 100644
+   • data/icon.bin [modified] binary; line counts unavailable
+   • docs/legacy.md → docs/usage.md [renamed] +0 -0
+   • src/total.py [modified] +0 -0 mode 100644 → 100755
+────────────────────────────────────────────────────
+  Offline heuristic draft. Tests were not run; review before sharing.
+
+
+=== Signals have rule and path evidence ===
+$ diffnote --staged --no-color
+diffnote — reviewable PR draft
+────────────────────────────────────────────────────
+  2 files changed (+2 / -1 text lines)
+  Suggested title: chore: review database schema changes
+  Title source: diff paths
+  Change source: staged changes
+  Changelog section: chore
+
+  Review signals (heuristics, not safety findings)
+   • auth / security related
+       auth/session.py [auth-path; path]
+       auth/session.py [security-keyword; deleted]
+   • database migration / schema change
+       db/migrations/001_widgets.sql [migration-path; path]
+       db/migrations/001_widgets.sql [schema-keyword; added]
+
+  Changes by area
+   migration  1
+   source     1
+
+  Highlights
+   • auth/session.py [modified] +1 -1
+   • db/migrations/001_widgets.sql [added] +1 -0 mode — → 100644
+────────────────────────────────────────────────────
+  Offline heuristic draft. Tests were not run; review before sharing.
+
+
+=== JSON facts for local tooling ===
+$ diffnote --staged --json  # metadata scenario
+{
+  "source": "staged changes",
+  "files": [
+    {
+      "path": "data/empty.txt",
+      "old_path": null,
+      "new_path": "data/empty.txt",
+      "status": "added",
+      "added": 0,
+      "deleted": 0,
+      "binary": false,
+      "old_mode": null,
+      "new_mode": "100644"
+    },
+    {
+      "path": "data/icon.bin",
+      "old_path": "data/icon.bin",
+      "new_path": "data/icon.bin",
+      "status": "modified",
+      "added": null,
+      "deleted": null,
+      "binary": true,
+      "old_mode": "100644",
+      "new_mode": "100644"
+    },
+    {
+      "path": "docs/usage.md",
+      "old_path": "docs/legacy.md",
+      "new_path": "docs/usage.md",
+      "status": "renamed",
+      "added": 0,
+      "deleted": 0,
+      "binary": false,
+      "old_mode": null,
+      "new_mode": null
+    },
+    {
+      "path": "src/total.py",
+      "old_path": "src/total.py",
+      "new_path": "src/total.py",
+      "status": "modified",
+      "added": 0,
+      "deleted": 0,
+      "binary": false,
+      "old_mode": "100644",
+      "new_mode": "100755"
+    }
+  ],
+  "limits": [
+    "Heuristic draft; semantic correctness is unverified.",
+    "Tests were not run. Absence of signals is not evidence of safety."
+  ]
+}
+
+
+=== Configured Git filters are rejected ===
+$ diffnote --no-color
+diffnote: repositories with clean/process filters are unsupported; no filter programs will run
+Expected exit: 2. Helper marker absent.

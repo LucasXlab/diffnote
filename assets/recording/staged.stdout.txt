@@ -1,0 +1,15 @@
+diffnote — reviewable PR draft
+────────────────────────────────────────────────────
+  1 files changed (+1 / -0 text lines)
+  Suggested title: docs: update documentation
+  Title source: diff paths
+  Change source: staged changes
+  Changelog section: docs
+
+  Changes by area
+   docs       1
+
+  Highlights
+   • docs/guide.md [modified] +1 -0
+────────────────────────────────────────────────────
+  Offline heuristic draft. Tests were not run; review before sharing.

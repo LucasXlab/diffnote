@@ -1,0 +1,111 @@
+{
+  "total_files": 2,
+  "added": 2,
+  "deleted": 1,
+  "areas": {
+    "source": 1,
+    "migration": 1
+  },
+  "risks": [
+    {
+      "label": "auth / security related",
+      "files": [
+        "auth/session.py"
+      ],
+      "evidence": [
+        {
+          "path": "auth/session.py",
+          "rule": "auth-path",
+          "source": "path"
+        },
+        {
+          "path": "auth/session.py",
+          "rule": "security-keyword",
+          "source": "deleted"
+        }
+      ]
+    },
+    {
+      "label": "database migration / schema change",
+      "files": [
+        "db/migrations/001_widgets.sql"
+      ],
+      "evidence": [
+        {
+          "path": "db/migrations/001_widgets.sql",
+          "rule": "migration-path",
+          "source": "path"
+        },
+        {
+          "path": "db/migrations/001_widgets.sql",
+          "rule": "schema-keyword",
+          "source": "added"
+        }
+      ]
+    }
+  ],
+  "title": "chore: review database schema changes",
+  "section": "chore",
+  "highlights": [
+    {
+      "path": "auth/session.py",
+      "old_path": "auth/session.py",
+      "new_path": "auth/session.py",
+      "status": "modified",
+      "binary": false,
+      "old_mode": "100644",
+      "new_mode": "100644",
+      "added": 1,
+      "deleted": 1,
+      "area": "source",
+      "risks": [
+        "auth / security related"
+      ]
+    },
+    {
+      "path": "db/migrations/001_widgets.sql",
+      "old_path": null,
+      "new_path": "db/migrations/001_widgets.sql",
+      "status": "added",
+      "binary": false,
+      "old_mode": null,
+      "new_mode": "100644",
+      "added": 1,
+      "deleted": 0,
+      "area": "migration",
+      "risks": [
+        "database migration / schema change"
+      ]
+    }
+  ],
+  "files": [
+    {
+      "path": "auth/session.py",
+      "old_path": "auth/session.py",
+      "new_path": "auth/session.py",
+      "status": "modified",
+      "added": 1,
+      "deleted": 1,
+      "binary": false,
+      "old_mode": "100644",
+      "new_mode": "100644"
+    },
+    {
+      "path": "db/migrations/001_widgets.sql",
+      "old_path": null,
+      "new_path": "db/migrations/001_widgets.sql",
+      "status": "added",
+      "added": 1,
+      "deleted": 0,
+      "binary": false,
+      "old_mode": null,
+      "new_mode": "100644"
+    }
+  ],
+  "source": "staged changes",
+  "title_source": "diff paths",
+  "limits": [
+    "Heuristic draft; semantic correctness is unverified.",
+    "Tests were not run. Absence of signals is not evidence of safety."
+  ]
+}

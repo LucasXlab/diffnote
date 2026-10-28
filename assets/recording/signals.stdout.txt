@@ -1,0 +1,25 @@
+diffnote — reviewable PR draft
+────────────────────────────────────────────────────
+  2 files changed (+2 / -1 text lines)
+  Suggested title: chore: review database schema changes
+  Title source: diff paths
+  Change source: staged changes
+  Changelog section: chore
+
+  Review signals (heuristics, not safety findings)
+   • auth / security related
+       auth/session.py [auth-path; path]
+       auth/session.py [security-keyword; deleted]
+   • database migration / schema change
+       db/migrations/001_widgets.sql [migration-path; path]
+       db/migrations/001_widgets.sql [schema-keyword; added]
+
+  Changes by area
+   migration  1
+   source     1
+
+  Highlights
+   • auth/session.py [modified] +1 -1
+   • db/migrations/001_widgets.sql [added] +1 -0 mode — → 100644
+────────────────────────────────────────────────────
+  Offline heuristic draft. Tests were not run; review before sharing.

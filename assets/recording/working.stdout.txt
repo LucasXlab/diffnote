@@ -1,0 +1,17 @@
+diffnote — reviewable PR draft
+────────────────────────────────────────────────────
+  2 files changed (+2 / -1 text lines)
+  Suggested title: docs: update documentation
+  Title source: diff paths
+  Change source: tracked working tree
+  Changelog section: docs
+
+  Changes by area
+   docs       1
+   source     1
+
+  Highlights
+   • src/total.py [modified] +1 -1
+   • docs/guide.md [modified] +1 -0
+────────────────────────────────────────────────────
+  Offline heuristic draft. Tests were not run; review before sharing.
